@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1021153A1C98C4853056908C41501E3E /* Pods-MRWorldMapView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 377251925006E93344A510D2437CC4DB /* Pods-MRWorldMapView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37389220049E5ACCFAB21DCACC6CDE98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BAD92379E6B2036AD257E0FE79E22 /* UIKit.framework */; };
+		6991784DCDEA0E4C4685CAFB637BA2E9 /* Pods-MRWorldMapView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1A3C40B7D8C69938315A749C9A3DC /* Pods-MRWorldMapView_Tests-dummy.m */; };
+		69ACE0AF7081B8F08D7CD5819FB12AA7 /* Pods-MRWorldMapView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1F0A9A6893FD1826CCE680EFC92249 /* Pods-MRWorldMapView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70384275D274DD172C6D6A95962A5C6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F40C5B53D9BD357E60BD67FEA3C0CC1 /* Foundation.framework */; };
+		9A278DB955A06A00ADBC3B8674193561 /* MRWorldMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E4CD6909298660D5C17E5A753BB9DE /* MRWorldMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EC9784C58B457CD4FD59152EAFF6C69 /* MRWorldMapView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C201BA1A005AB41BC1053437D0C329 /* MRWorldMapView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEBA48F46994B099D6B54CA8FC607E24 /* MRWorldMapView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEACBDF802B707936D19A6A1AF421641 /* MRWorldMapView-dummy.m */; };
+		B650114D48F9C9460B9118DAF1FF8EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F40C5B53D9BD357E60BD67FEA3C0CC1 /* Foundation.framework */; };
+		C24D21465F2C3CFD3516644025FA8C21 /* Pods-MRWorldMapView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A99186403B6CB3CA55AE4741BDE72C01 /* Pods-MRWorldMapView_Example-dummy.m */; };
+		E148F416A28B670533307765B4925149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F40C5B53D9BD357E60BD67FEA3C0CC1 /* Foundation.framework */; };
+		F78838D7E9F9C225D451F309D66F334B /* MRWorldMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563F48D046E6E83A49A9BB725EDAEE0 /* MRWorldMapView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E80003C8410DE8A13F1D8FF1A8C754E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26E3B323CDAB95764B361AE5954A8322;
+			remoteInfo = MRWorldMapView;
+		};
+		CDDAAEF5D0D4623564468B44617A556B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26E3B323CDAB95764B361AE5954A8322;
+			remoteInfo = MRWorldMapView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F6435A92B1883B1F33B922508FF38A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C201BA1A005AB41BC1053437D0C329 /* MRWorldMapView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRWorldMapView-umbrella.h"; sourceTree = "<group>"; };
+		05B078AB66EA001099779A53A16CDD1C /* MRWorldMapView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRWorldMapView-prefix.pch"; sourceTree = "<group>"; };
+		0A6DFD0DFE1D077F224E2B08752FBB52 /* Pods-MRWorldMapView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRWorldMapView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0A942FFE0295AA6A35DDA704B1E205D7 /* Pods-MRWorldMapView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MRWorldMapView_Tests.modulemap"; sourceTree = "<group>"; };
+		1086A1F38ECD1BDBB3F039E27E195CB9 /* Pods-MRWorldMapView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRWorldMapView_Example-resources.sh"; sourceTree = "<group>"; };
+		182CD81D411C9F7AB5DBFD14D03E230D /* Pods-MRWorldMapView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRWorldMapView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1B1F0A9A6893FD1826CCE680EFC92249 /* Pods-MRWorldMapView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRWorldMapView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2537C42987BF3894B49FC2213BEEA76E /* Pods-MRWorldMapView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRWorldMapView_Tests-resources.sh"; sourceTree = "<group>"; };
+		2563F48D046E6E83A49A9BB725EDAEE0 /* MRWorldMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MRWorldMapView.m; sourceTree = "<group>"; };
+		267727EABB11AC088A33F7BD6F66D778 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267CE4D2705B1927B9F8ECF6DC585826 /* Pods-MRWorldMapView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRWorldMapView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2F3CFE2560C9DC62A42F1C9375834073 /* Pods-MRWorldMapView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRWorldMapView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		377251925006E93344A510D2437CC4DB /* Pods-MRWorldMapView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRWorldMapView_Example-umbrella.h"; sourceTree = "<group>"; };
+		3C7D43B781A040AE459E727E6A709A76 /* MRWorldMapView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRWorldMapView.xcconfig; sourceTree = "<group>"; };
+		400BAD92379E6B2036AD257E0FE79E22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		725F60272829F76F058416F6F90AF1FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EAA277C1C01908D2580E3FB4AE9048D /* Pods-MRWorldMapView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRWorldMapView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		7F40C5B53D9BD357E60BD67FEA3C0CC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		84A1A3C40B7D8C69938315A749C9A3DC /* Pods-MRWorldMapView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRWorldMapView_Tests-dummy.m"; sourceTree = "<group>"; };
+		86E0D12BAD07ABBFF0D340EFE88E02F6 /* Pods-MRWorldMapView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRWorldMapView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8CC797E15BCF66282FC3BBC9E5A1F37E /* Pods-MRWorldMapView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRWorldMapView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9F8939D3512BCEFEA3BD0EE5DF36B4F4 /* Pods_MRWorldMapView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70EA47A0E512245AED6042CE54A3D96 /* MRWorldMapView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MRWorldMapView-Private.xcconfig"; sourceTree = "<group>"; };
+		A99186403B6CB3CA55AE4741BDE72C01 /* Pods-MRWorldMapView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRWorldMapView_Example-dummy.m"; sourceTree = "<group>"; };
+		B76F8353C721D41C48EE6CD1626CE570 /* Pods-MRWorldMapView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MRWorldMapView_Example.modulemap"; sourceTree = "<group>"; };
+		BA2044F5A962651650F33131DE5BF639 /* MRWorldMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRWorldMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18E763AABE14930D29774A11A6B603D /* MRWorldMapView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRWorldMapView.modulemap; sourceTree = "<group>"; };
+		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D4D265E3075559F1C482B6C52964C6E2 /* Pods-MRWorldMapView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRWorldMapView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F0AC1B3AAF975820120A62DF2E492A4F /* Pods-MRWorldMapView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRWorldMapView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1E4CD6909298660D5C17E5A753BB9DE /* MRWorldMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MRWorldMapView.h; sourceTree = "<group>"; };
+		FC78648EB258B3EA976FB6C40D0ECA8D /* Pods-MRWorldMapView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRWorldMapView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FEACBDF802B707936D19A6A1AF421641 /* MRWorldMapView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRWorldMapView-dummy.m"; sourceTree = "<group>"; };
+		FFC2D2262E041B92171216E962BDFE1B /* Pods_MRWorldMapView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D32AC6DA0EAB940EFB2B6870F780760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70384275D274DD172C6D6A95962A5C6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC49698C673327A819779753CCFE3449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E148F416A28B670533307765B4925149 /* Foundation.framework in Frameworks */,
+				37389220049E5ACCFAB21DCACC6CDE98 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37AB24341359A121709F2E9A3A45E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B650114D48F9C9460B9118DAF1FF8EF4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0720760E6FAA87218C034E98CCD3509B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B64C98E0C57C5D7540535AAD87EDED87 /* MRWorldMapView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		14BF04A624D63C5EE64AA37F9CBEBCE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				01F6435A92B1883B1F33B922508FF38A /* Info.plist */,
+				C18E763AABE14930D29774A11A6B603D /* MRWorldMapView.modulemap */,
+				3C7D43B781A040AE459E727E6A709A76 /* MRWorldMapView.xcconfig */,
+				A70EA47A0E512245AED6042CE54A3D96 /* MRWorldMapView-Private.xcconfig */,
+				FEACBDF802B707936D19A6A1AF421641 /* MRWorldMapView-dummy.m */,
+				05B078AB66EA001099779A53A16CDD1C /* MRWorldMapView-prefix.pch */,
+				02C201BA1A005AB41BC1053437D0C329 /* MRWorldMapView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MRWorldMapView";
+			sourceTree = "<group>";
+		};
+		21FF83D38BE2E1D5499360B06000D8F3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F40C5B53D9BD357E60BD67FEA3C0CC1 /* Foundation.framework */,
+				400BAD92379E6B2036AD257E0FE79E22 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2A1C69BFD5DDA9C1F56862AEBE5E6FC3 /* Pods-MRWorldMapView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				267727EABB11AC088A33F7BD6F66D778 /* Info.plist */,
+				B76F8353C721D41C48EE6CD1626CE570 /* Pods-MRWorldMapView_Example.modulemap */,
+				FC78648EB258B3EA976FB6C40D0ECA8D /* Pods-MRWorldMapView_Example-acknowledgements.markdown */,
+				182CD81D411C9F7AB5DBFD14D03E230D /* Pods-MRWorldMapView_Example-acknowledgements.plist */,
+				A99186403B6CB3CA55AE4741BDE72C01 /* Pods-MRWorldMapView_Example-dummy.m */,
+				7EAA277C1C01908D2580E3FB4AE9048D /* Pods-MRWorldMapView_Example-frameworks.sh */,
+				1086A1F38ECD1BDBB3F039E27E195CB9 /* Pods-MRWorldMapView_Example-resources.sh */,
+				377251925006E93344A510D2437CC4DB /* Pods-MRWorldMapView_Example-umbrella.h */,
+				86E0D12BAD07ABBFF0D340EFE88E02F6 /* Pods-MRWorldMapView_Example.debug.xcconfig */,
+				8CC797E15BCF66282FC3BBC9E5A1F37E /* Pods-MRWorldMapView_Example.release.xcconfig */,
+			);
+			name = "Pods-MRWorldMapView_Example";
+			path = "Target Support Files/Pods-MRWorldMapView_Example";
+			sourceTree = "<group>";
+		};
+		34FB2DEE42D4D9C2AE1BA414A7CBE0A4 /* MRWorldMapView */ = {
+			isa = PBXGroup;
+			children = (
+				F1E4CD6909298660D5C17E5A753BB9DE /* MRWorldMapView.h */,
+				2563F48D046E6E83A49A9BB725EDAEE0 /* MRWorldMapView.m */,
+			);
+			path = MRWorldMapView;
+			sourceTree = "<group>";
+		};
+		5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21FF83D38BE2E1D5499360B06000D8F3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				0720760E6FAA87218C034E98CCD3509B /* Development Pods */,
+				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				D871C749CBB672E76A502DD5E90F9842 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		861969331AA207BB9B06B6461C944422 /* Pods-MRWorldMapView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				725F60272829F76F058416F6F90AF1FD /* Info.plist */,
+				0A942FFE0295AA6A35DDA704B1E205D7 /* Pods-MRWorldMapView_Tests.modulemap */,
+				D4D265E3075559F1C482B6C52964C6E2 /* Pods-MRWorldMapView_Tests-acknowledgements.markdown */,
+				0A6DFD0DFE1D077F224E2B08752FBB52 /* Pods-MRWorldMapView_Tests-acknowledgements.plist */,
+				84A1A3C40B7D8C69938315A749C9A3DC /* Pods-MRWorldMapView_Tests-dummy.m */,
+				267CE4D2705B1927B9F8ECF6DC585826 /* Pods-MRWorldMapView_Tests-frameworks.sh */,
+				2537C42987BF3894B49FC2213BEEA76E /* Pods-MRWorldMapView_Tests-resources.sh */,
+				1B1F0A9A6893FD1826CCE680EFC92249 /* Pods-MRWorldMapView_Tests-umbrella.h */,
+				F0AC1B3AAF975820120A62DF2E492A4F /* Pods-MRWorldMapView_Tests.debug.xcconfig */,
+				2F3CFE2560C9DC62A42F1C9375834073 /* Pods-MRWorldMapView_Tests.release.xcconfig */,
+			);
+			name = "Pods-MRWorldMapView_Tests";
+			path = "Target Support Files/Pods-MRWorldMapView_Tests";
+			sourceTree = "<group>";
+		};
+		B64C98E0C57C5D7540535AAD87EDED87 /* MRWorldMapView */ = {
+			isa = PBXGroup;
+			children = (
+				34FB2DEE42D4D9C2AE1BA414A7CBE0A4 /* MRWorldMapView */,
+				14BF04A624D63C5EE64AA37F9CBEBCE7 /* Support Files */,
+			);
+			name = MRWorldMapView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA2044F5A962651650F33131DE5BF639 /* MRWorldMapView.framework */,
+				9F8939D3512BCEFEA3BD0EE5DF36B4F4 /* Pods_MRWorldMapView_Example.framework */,
+				FFC2D2262E041B92171216E962BDFE1B /* Pods_MRWorldMapView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D871C749CBB672E76A502DD5E90F9842 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A1C69BFD5DDA9C1F56862AEBE5E6FC3 /* Pods-MRWorldMapView_Example */,
+				861969331AA207BB9B06B6461C944422 /* Pods-MRWorldMapView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5669514DB97473F03E77FE68A3306F86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69ACE0AF7081B8F08D7CD5819FB12AA7 /* Pods-MRWorldMapView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D77A238E81C5593D54984717FB1EDE60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1021153A1C98C4853056908C41501E3E /* Pods-MRWorldMapView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF76F52F1D7157713B5C9E0ABE8AC745 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC9784C58B457CD4FD59152EAFF6C69 /* MRWorldMapView-umbrella.h in Headers */,
+				9A278DB955A06A00ADBC3B8674193561 /* MRWorldMapView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		26E3B323CDAB95764B361AE5954A8322 /* MRWorldMapView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA1CF46E66E8DF7B8C23B6623530C409 /* Build configuration list for PBXNativeTarget "MRWorldMapView" */;
+			buildPhases = (
+				B4AC59DE038E08BF2564D5AF808FF3BC /* Sources */,
+				AC49698C673327A819779753CCFE3449 /* Frameworks */,
+				EF76F52F1D7157713B5C9E0ABE8AC745 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRWorldMapView;
+			productName = MRWorldMapView;
+			productReference = BA2044F5A962651650F33131DE5BF639 /* MRWorldMapView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4080F06D21F57A8E3CE833A85BD66CE9 /* Pods-MRWorldMapView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA29F6852CDFE51385CC30032BEBC33 /* Build configuration list for PBXNativeTarget "Pods-MRWorldMapView_Example" */;
+			buildPhases = (
+				41FD22173B77D8D69B37C371BEC90530 /* Sources */,
+				4D32AC6DA0EAB940EFB2B6870F780760 /* Frameworks */,
+				D77A238E81C5593D54984717FB1EDE60 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB414906E173919F6ED144953F74C3F3 /* PBXTargetDependency */,
+			);
+			name = "Pods-MRWorldMapView_Example";
+			productName = "Pods-MRWorldMapView_Example";
+			productReference = 9F8939D3512BCEFEA3BD0EE5DF36B4F4 /* Pods_MRWorldMapView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8C561980CB4192FBCE7AF03244287B0 /* Pods-MRWorldMapView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8109FB40D4BD56A22FB11457DCEEE2 /* Build configuration list for PBXNativeTarget "Pods-MRWorldMapView_Tests" */;
+			buildPhases = (
+				F8517C895FA540FB36073A124803B52C /* Sources */,
+				C37AB24341359A121709F2E9A3A45E16 /* Frameworks */,
+				5669514DB97473F03E77FE68A3306F86 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EC746B3592317896B225262FAB1DA79 /* PBXTargetDependency */,
+			);
+			name = "Pods-MRWorldMapView_Tests";
+			productName = "Pods-MRWorldMapView_Tests";
+			productReference = FFC2D2262E041B92171216E962BDFE1B /* Pods_MRWorldMapView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26E3B323CDAB95764B361AE5954A8322 /* MRWorldMapView */,
+				4080F06D21F57A8E3CE833A85BD66CE9 /* Pods-MRWorldMapView_Example */,
+				E8C561980CB4192FBCE7AF03244287B0 /* Pods-MRWorldMapView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41FD22173B77D8D69B37C371BEC90530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24D21465F2C3CFD3516644025FA8C21 /* Pods-MRWorldMapView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AC59DE038E08BF2564D5AF808FF3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBA48F46994B099D6B54CA8FC607E24 /* MRWorldMapView-dummy.m in Sources */,
+				F78838D7E9F9C225D451F309D66F334B /* MRWorldMapView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8517C895FA540FB36073A124803B52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6991784DCDEA0E4C4685CAFB637BA2E9 /* Pods-MRWorldMapView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EC746B3592317896B225262FAB1DA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRWorldMapView;
+			target = 26E3B323CDAB95764B361AE5954A8322 /* MRWorldMapView */;
+			targetProxy = 3E80003C8410DE8A13F1D8FF1A8C754E /* PBXContainerItemProxy */;
+		};
+		EB414906E173919F6ED144953F74C3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRWorldMapView;
+			target = 26E3B323CDAB95764B361AE5954A8322 /* MRWorldMapView */;
+			targetProxy = CDDAAEF5D0D4623564468B44617A556B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25E171B952D2694AE4310457BB6F22C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		335B8A8D3D1461C1A66D64904C3EFBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0AC1B3AAF975820120A62DF2E492A4F /* Pods-MRWorldMapView_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MRWorldMapView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRWorldMapView_Tests/Pods-MRWorldMapView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MRWorldMapView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36D30F3A23E70EBEE3410981628E9278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E0D12BAD07ABBFF0D340EFE88E02F6 /* Pods-MRWorldMapView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MRWorldMapView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MRWorldMapView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		66142A78CAFB4EE7ECB40DB3DDC0A30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F3CFE2560C9DC62A42F1C9375834073 /* Pods-MRWorldMapView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MRWorldMapView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRWorldMapView_Tests/Pods-MRWorldMapView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MRWorldMapView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		664A547D3C957543398A1C1CA8D23ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7AB061A8663DA641B82FF7A84A12BF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A70EA47A0E512245AED6042CE54A3D96 /* MRWorldMapView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MRWorldMapView/MRWorldMapView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRWorldMapView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRWorldMapView/MRWorldMapView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MRWorldMapView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C53CBAEFA7DD9C061F2BF5BB0C47212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CC797E15BCF66282FC3BBC9E5A1F37E /* Pods-MRWorldMapView_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MRWorldMapView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MRWorldMapView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B999EE1C2A0762E359294CF2F508956B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A70EA47A0E512245AED6042CE54A3D96 /* MRWorldMapView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MRWorldMapView/MRWorldMapView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRWorldMapView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRWorldMapView/MRWorldMapView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MRWorldMapView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DA29F6852CDFE51385CC30032BEBC33 /* Build configuration list for PBXNativeTarget "Pods-MRWorldMapView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D30F3A23E70EBEE3410981628E9278 /* Debug */,
+				9C53CBAEFA7DD9C061F2BF5BB0C47212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				664A547D3C957543398A1C1CA8D23ACF /* Debug */,
+				25E171B952D2694AE4310457BB6F22C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA1CF46E66E8DF7B8C23B6623530C409 /* Build configuration list for PBXNativeTarget "MRWorldMapView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B999EE1C2A0762E359294CF2F508956B /* Debug */,
+				7AB061A8663DA641B82FF7A84A12BF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8109FB40D4BD56A22FB11457DCEEE2 /* Build configuration list for PBXNativeTarget "Pods-MRWorldMapView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				335B8A8D3D1461C1A66D64904C3EFBEA /* Debug */,
+				66142A78CAFB4EE7ECB40DB3DDC0A30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

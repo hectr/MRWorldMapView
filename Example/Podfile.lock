@@ -1,0 +1,14 @@
+PODS:
+  - MRWorldMapView (0.0.1)
+
+DEPENDENCIES:
+  - MRWorldMapView (from `../`)
+
+EXTERNAL SOURCES:
+  MRWorldMapView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MRWorldMapView: 11eb3e111ad96fe131485be86751a6809510b7cc
+
+COCOAPODS: 0.38.0

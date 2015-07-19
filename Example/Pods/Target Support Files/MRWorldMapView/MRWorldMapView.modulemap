@@ -1,0 +1,6 @@
+framework module MRWorldMapView {
+  umbrella header "MRWorldMapView-umbrella.h"
+
+  export *
+  module * { export * }
+}

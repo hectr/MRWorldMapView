@@ -1,0 +1,20 @@
+{
+  "name": "MRWorldMapView",
+  "version": "0.0.1",
+  "summary": "UIView that displays a world map with selectable countries.",
+  "homepage": "https://github.com/hectr/MRWorldMapView",
+  "license": "Apache 2.0",
+  "authors": {
+    "hectr": "h@mrhector.me"
+  },
+  "source": {
+    "git": "https://github.com/hectr/MRWorldMapView.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "MRWorldMapView",
+  "frameworks": "UIKit"
+}
