@@ -32,13 +32,15 @@
 /**
  Notifies that the country with the given `code` has been highlighted.
  
+ @param map The world map object informing the delegate about the new highlighted country.
  @param code The country ISO code.
  */
 - (void)worldMap:(MRWorldMapView *)map didHighlightCountry:(NSString *)code;
 
 /**
  Notifies that the country with the given `code` has been selected.
- 
+
+ @param map The world map object informing the delegate about the new selected country.
  @param code The country ISO code.
  */
 - (void)worldMap:(MRWorldMapView *)map didSelectCountry:(NSString *)code;
@@ -46,6 +48,7 @@
 /**
  Should return the color to be used as fill color for the country with the given `code`.
  
+ @param map The world map object that is making this request.
  @param code The country ISO code.
  @return The `UIColor` to be used as fill color for the country.
  */
@@ -54,6 +57,7 @@
 /**
  Should return the color to be used as fill color for the country with the given `code` when selected.
  
+ @param map The world map object that is making this request.
  @param code The country ISO code.
  @return The `UIColor` to be used as fill color for the country when selected.
  */
@@ -62,6 +66,7 @@
 /**
  Should return the color to be used as fill color for the country with the given `code` when highlighted.
  
+ @param map The world map object that is making this request.
  @param code The country ISO code.
  @return The `UIColor` to be used as fill color for the country when highlighted.
  */
