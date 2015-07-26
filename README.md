@@ -13,6 +13,7 @@ Its appearance can be customized through `IBInspectable`s.
 The code for drawing the map is derived from the [Yuba - Cocoa framework for drawing graphs, charts and maps](https://github.com/sergeylenkov/Yuba).
 
 ![World Map](screenshot.jpg?raw=true "World Map")
+![World Map](custom.jpg?raw=true "World Map")
 
 ## Usage
 
