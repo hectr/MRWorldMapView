@@ -17,9 +17,18 @@
 
 #pragma mark - MRWorldMapViewDelegate
 
+- (void)worldMap:(MRWorldMapView *)map didHighlightCountry:(NSString *)code
+{
+    if (code) {
+        NSLog(@"highlighted country: %@", code);
+    }
+}
+
 - (void)worldMap:(MRWorldMapView *)map didSelectCountry:(NSString *)code
 {
-    self.label.text = code;
+    NSLocale *locale = NSLocale.currentLocale;
+    NSString *countryName = [locale displayNameForKey:NSLocaleCountryCode value:code];
+    self.label.text = countryName;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -27,6 +36,20 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.contentView;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        self.worldMapView.highlightedCountry = nil;
+        [self.worldMapView setNeedsDisplay];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.worldMapView.highlightedCountry = nil;
+    [self.worldMapView setNeedsDisplay];
 }
 
 #pragma mark - UIView
