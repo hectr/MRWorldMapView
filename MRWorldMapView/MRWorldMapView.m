@@ -35,12 +35,18 @@
 
     _countryColor = UIColor.grayColor;
     _countryBorderColor = UIColor.whiteColor;
+    _countryBorderWidth = 1.0f;
+    _countryBorderRounded = NO;
     
     _highlightedColor = UIColor.grayColor;
     _highlightedBorderColor = UIColor.darkGrayColor;
+    _highlightedBorderWidth = 1.0f;
+    _highlightedBorderRounded = NO;
     
     _selectedColor = UIColor.darkGrayColor;
     _selectedBorderColor = UIColor.darkGrayColor;
+    _selectedBorderWidth = 1.0f;
+    _selectedBorderRounded = NO;
     
     _selectedShadowColor = UIColor.blackColor;
     _selectedShadowOffset = CGSizeMake(0.0f, -3.0f);
@@ -282,7 +288,9 @@
 - (void)drawHighlightInRect:(CGRect const)rect
                  forCountry:(NSString *const)code
                   withColor:(UIColor *const)color
-             andBorderColor:(UIColor *const)borderColor
+                borderColor:(UIColor *const)borderColor
+                borderWidth:(CGFloat const)borderWidth
+                  joinStyle:(CGLineJoin const)lineJoin
                      shadow:(BOOL const)shadow
 {
     CGContextRef const context = UIGraphicsGetCurrentContext();
@@ -315,7 +323,8 @@
         NSArray *const coords = [[parts objectAtIndex:i] componentsSeparatedByString:@";"];
         
         UIBezierPath *const path = [UIBezierPath bezierPath];
-        [path setLineWidth:1];
+        [path setLineWidth:borderWidth];
+        [path setLineJoinStyle:lineJoin];
         
         startPoint = CGPointFromString([coords objectAtIndex:0]);
         startPoint.x = startPoint.x * ratioX + mapHorizontalPadding;
@@ -428,6 +437,8 @@
     NSDictionary *const map = self.map;
     CGFloat const mapHorizontalPadding = self.mapHorizontalPadding;
     UIColor *const countryBorderColor = self.countryBorderColor;
+    CGFloat const countryBorderWidth = self.countryBorderWidth;
+    CGLineJoin const countryBorderJoin = (self.countryBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter);
     
     for (id key in map) {
         NSArray *const parts = map[key];
@@ -436,7 +447,8 @@
             NSArray *const coords = [[parts objectAtIndex:i] componentsSeparatedByString:@";"];
             
             UIBezierPath *const path = [UIBezierPath bezierPath];
-            [path setLineWidth:1];
+            [path setLineWidth:countryBorderWidth];
+            [path setLineJoinStyle:countryBorderJoin];
             
             startPoint = CGPointFromString([coords objectAtIndex:0]);
             startPoint.x = startPoint.x * ratioX + mapHorizontalPadding;
@@ -488,7 +500,9 @@
         [self drawHighlightInRect:rect
                        forCountry:key
                         withColor:colorForCountry
-                   andBorderColor:self.highlightedBorderColor
+                      borderColor:self.highlightedBorderColor
+                      borderWidth:self.highlightedBorderWidth
+                        joinStyle:(self.highlightedBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter)
                            shadow:NO];
     }
     NSString *const highlightedCountry = highlightedCountries.lastObject;
@@ -503,7 +517,9 @@
         [self drawHighlightInRect:rect
                        forCountry:key
                         withColor:colorForCountry
-                   andBorderColor:self.selectedBorderColor
+                      borderColor:self.selectedBorderColor
+                      borderWidth:self.selectedBorderWidth
+                        joinStyle:(self.selectedBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter)
                            shadow:YES];
     }
     NSString *const selectedCountry = selectedCountries.lastObject;

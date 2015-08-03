@@ -126,6 +126,16 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor *countryBorderColor;
 
 /**
+ Country border width.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat countryBorderWidth;
+
+/**
+ Whether country border line join style is rounded or not.
+ */
+@property (nonatomic, assign) IBInspectable BOOL countryBorderRounded;
+
+/**
  Default highlighted country fill color.
  */
 @property (nonatomic, strong) IBInspectable UIColor *highlightedColor;
@@ -136,6 +146,16 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor *highlightedBorderColor;
 
 /**
+ Highlighted country border width.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat highlightedBorderWidth;
+
+/**
+ Whether highlighted country border line join style.
+ */
+@property (nonatomic, assign) IBInspectable BOOL highlightedBorderRounded;
+
+/**
  Default selected country fill color.
  */
 @property (nonatomic, strong) IBInspectable UIColor *selectedColor;
@@ -144,6 +164,17 @@ IB_DESIGNABLE
  Selected country border color.
  */
 @property (nonatomic, strong) IBInspectable UIColor *selectedBorderColor;
+
+/**
+ Selected country border width.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat selectedBorderWidth;
+
+/**
+ Whether selected country border line join style.
+ */
+@property (nonatomic, assign) IBInspectable BOOL selectedBorderRounded;
+
 
 /**
  Selected country border shadow color.
