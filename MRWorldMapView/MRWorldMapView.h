@@ -88,7 +88,7 @@ IB_DESIGNABLE
 /**
  The dictionary with the world map data.
  */
-@property (nonatomic, strong) NSMutableDictionary *map;
+@property (nonatomic, strong) NSDictionary *map;
 
 /**
  Use this for adjusting the horizontal ratio to your map data.
