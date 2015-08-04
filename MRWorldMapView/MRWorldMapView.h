@@ -91,19 +91,11 @@ IB_DESIGNABLE
 @property (nonatomic, strong) NSDictionary *map;
 
 /**
- Use this for adjusting the horizontal ratio to your map data.
+ The distance that the map is inset from the edges of the view.
+ 
+ You can use this value to adjust map's aspect ratio.
  */
-@property (nonatomic, assign) IBInspectable NSInteger horizontalRatioDivisor;
-
-/**
- Use this for adjusting the verticat ratio to your map data.
- */
-@property (nonatomic, assign) IBInspectable NSInteger verticalRatioDivisor;
-
-/**
- The horizontal padding between the world map and the view's borders.
- */
-@property (nonatomic, assign) IBInspectable CGFloat mapHorizontalPadding;
+@property (nonatomic, assign) UIEdgeInsets mapInset;
 
 /**
  Color used for creating the background gradient.
@@ -183,9 +175,7 @@ IB_DESIGNABLE
 
 /**
  Selected country border shadow offset.
- 
- You should provide the shadow offset inverted, because of the transform applied to the view.
- */
+*/
 @property (nonatomic, assign) IBInspectable CGSize selectedShadowOffset;
 
 /**
