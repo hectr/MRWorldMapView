@@ -266,6 +266,11 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable NSString *selectedCountry;
 
 /**
+ Set of countries that will not be displayed on the map.
+ */
+@property (nonatomic, copy) NSSet *hiddenCountries;
+
+/**
  Delegate that will be notified when the selected or highlighted countries change.
  */
 @property (nonatomic, assign) IBOutlet id <MRWorldMapViewDelegate> delegate;

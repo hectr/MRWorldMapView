@@ -65,10 +65,14 @@
 
 - (void)setMinMaxPoints
 {
-    CGPoint min = CGPointMake(0.0f, 0.0f);
+    CGPoint min = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
     CGPoint max = CGPointMake(0.0f, 0.0f);
     
+    NSSet *const hiddenCountries = self.hiddenCountries;
     for (NSArray *const key in _map.allKeys) {
+        if ([hiddenCountries containsObject:key]) {
+            continue;
+        }
         NSArray *const parts = _map[key];
         for (NSArray *const coords in parts) {
             for (NSArray *const components in coords) {
@@ -156,21 +160,21 @@
         
         components = coords.firstObject;
         startPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-        startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/maxPoint.x*size.width;
-        startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/maxPoint.y*size.height;
+        startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+        startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
         
         [path moveToPoint:startPoint];
         
         for (int j = 1; j < [coords count] - 1; j++) {
             components = coords[j];
             startPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-            startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/maxPoint.x*size.width;
-            startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/maxPoint.y*size.height;
+            startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+            startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
             
             components = coords[j + 1];
             endPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-            endPoint.x = mapInset.left + (endPoint.x - minPoint.x)/maxPoint.x*size.width;
-            endPoint.y = mapInset.top + (endPoint.y - minPoint.y)/maxPoint.y*size.height;
+            endPoint.x = mapInset.left + (endPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+            endPoint.y = mapInset.top + (endPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
             
             [path addLineToPoint:endPoint];
         }
@@ -328,8 +332,13 @@
     CGSize const size = CGSizeMake(self.bounds.size.width - mapInset.left - mapInset.right,
                                    self.bounds.size.height - mapInset.top - mapInset.bottom);
     CGLineJoin const countryBorderJoin = (self.countryBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter);
+    NSSet *const hiddenCountries = self.hiddenCountries;
     
     for (NSString *const key in map.allKeys) {
+        
+        if ([hiddenCountries containsObject:key]) {
+            continue;
+        }
         
         NSArray *const parts = map[key];
         
@@ -342,21 +351,21 @@
             
             components = coords.firstObject;
             startPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-            startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/maxPoint.x*size.width;
-            startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/maxPoint.y*size.height;
+            startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+            startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
             
             [path moveToPoint:startPoint];
             
             for (int j = 1; j < [coords count] - 1; j++) {
                 components = coords[j];
                 startPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-                startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/maxPoint.x*size.width;
-                startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/maxPoint.y*size.height;
+                startPoint.x = mapInset.left + (startPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+                startPoint.y = mapInset.top + (startPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
 
                 components = coords[j + 1];
                 endPoint = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
-                endPoint.x = mapInset.left + (endPoint.x - minPoint.x)/maxPoint.x*size.width;
-                endPoint.y = mapInset.top + (endPoint.y - minPoint.y)/maxPoint.y*size.height;
+                endPoint.x = mapInset.left + (endPoint.x - minPoint.x)/(maxPoint.x - minPoint.x)*size.width;
+                endPoint.y = mapInset.top + (endPoint.y - minPoint.y)/(maxPoint.y - minPoint.y)*size.height;
 
                 [path addLineToPoint:endPoint];
             }
@@ -391,7 +400,6 @@
             }
         }
     }
-    
     
     if (CGPointEqualToPoint(_highlightPoint, CGPointZero) && self.highlightedCountry) {
         [highlightedCountries removeAllObjects];
@@ -440,6 +448,7 @@
     _map = map;
     [self setMinMaxPoints];
     [self didChangeValueForKey:@"map"];
+    [self setNeedsDisplay];
 }
 
 - (void)setHighlightedCountry:(NSString *const)highlightedCountry
@@ -448,6 +457,7 @@
     _highlightPoint = CGPointZero;
     _highlightedCountry = highlightedCountry;
     [self didChangeValueForKey:@"highlightedCountry"];
+    [self setNeedsDisplay];
     if ([self.delegate respondsToSelector:@selector(worldMap:didHighlightCountry:)]) {
         [self.delegate worldMap:self didHighlightCountry:highlightedCountry];
     }
@@ -459,9 +469,19 @@
     _selectPoint = CGPointZero;
     _selectedCountry = selectedCountry;
     [self didChangeValueForKey:@"selectedCountry"];
+    [self setNeedsDisplay];
     if ([self.delegate respondsToSelector:@selector(worldMap:didSelectCountry:)]) {
         [self.delegate worldMap:self didSelectCountry:selectedCountry];
     }
+}
+
+- (void)setHiddenCountries:(NSSet *const)hiddenCountries
+{
+    [self willChangeValueForKey:@"hiddenCountries"];
+    _hiddenCountries = hiddenCountries.copy;
+    [self setMinMaxPoints];
+    [self didChangeValueForKey:@"hiddenCountries"];
+    [self setNeedsDisplay];
 }
 
 #pragma mark - UIResponder
