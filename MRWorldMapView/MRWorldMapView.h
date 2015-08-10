@@ -30,12 +30,30 @@
 @optional
 
 /**
+ Asks the delegate if the specified country should be highlighted.
+ 
+ @param map The world map object that is making this request.
+ @param code The code of the country being highlighted.
+ @return `YES` if the country should be highlighted or `NO` if it should not.
+ */
+- (BOOL)worldMap:(MRWorldMapView *)map shouldHighlightCountry:(NSString *)code;
+
+/**
  Notifies that the country with the given `code` has been highlighted.
  
  @param map The world map object informing the delegate about the new highlighted country.
  @param code The country ISO code.
  */
 - (void)worldMap:(MRWorldMapView *)map didHighlightCountry:(NSString *)code;
+
+/**
+ Asks the delegate if the specified country should be selected.
+ 
+ @param map The world map object that is making this request.
+ @param code The code of the country being selected.
+ @return `YES` if the country should be selected or `NO` if it should not.
+ */
+- (BOOL)worldMap:(MRWorldMapView *)map shouldSelectCountry:(NSString *)code;
 
 /**
  Notifies that the country with the given `code` has been selected.
@@ -55,6 +73,24 @@
 - (UIColor *)worldMap:(MRWorldMapView *)map colorForCountry:(NSString *)code;
 
 /**
+ Should return the color to be used as border color for the country with the given `code`.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The `UIColor` to be used as border color for the country.
+ */
+- (UIColor *)worldMap:(MRWorldMapView *)map borderColorForCountry:(NSString *)code;
+
+/**
+ Should return the width of the border for the country with the given `code`.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The width of the border for the country.
+ */
+- (CGFloat)worldMap:(MRWorldMapView *)map borderWidthForCountry:(NSString *)code;
+
+/**
  Should return the color to be used as fill color for the country with the given `code` when selected.
  
  @param map The world map object that is making this request.
@@ -64,6 +100,24 @@
 - (UIColor *)worldMap:(MRWorldMapView *)map selectedColorForCountry:(NSString *)code;
 
 /**
+ Should return the color to be used as border color for the country with the given `code` when selected.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The `UIColor` to be used as border color for the country when selected.
+ */
+- (UIColor *)worldMap:(MRWorldMapView *)map selectedBorderColorForCountry:(NSString *)code;
+
+/**
+ Should return the width of the border for the country with the given `code` when selected.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The width of the border for the country when selected.
+ */
+- (CGFloat)worldMap:(MRWorldMapView *)map selectedBorderWidthForCountry:(NSString *)code;
+
+/**
  Should return the color to be used as fill color for the country with the given `code` when highlighted.
  
  @param map The world map object that is making this request.
@@ -71,6 +125,24 @@
  @return The `UIColor` to be used as fill color for the country when highlighted.
  */
 - (UIColor *)worldMap:(MRWorldMapView *)map highlightedColorForCountry:(NSString *)code;
+
+/**
+ Should return the color to be used as border color for the country with the given `code` when highlighted.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The `UIColor` to be used as border color for the country when highlighted.
+ */
+- (UIColor *)worldMap:(MRWorldMapView *)map highlightedBorderColorForCountry:(NSString *)code;
+
+/**
+ Should return the width of the border for the country with the given `code` when highlighted.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The width of the border for the country when highlighted.
+ */
+- (CGFloat)worldMap:(MRWorldMapView *)map highlightedBorderWidthForCountry:(NSString *)code;
 
 @end
 

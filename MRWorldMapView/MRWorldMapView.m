@@ -217,6 +217,28 @@
     return color;
 }
 
+- (UIColor *)borderColorForCountry:(NSString *const)country
+{
+    UIColor *color;
+    if ([self.delegate respondsToSelector:@selector(worldMap:borderColorForCountry:)]) {
+        color = [self.delegate worldMap:self borderColorForCountry:country];
+    } else {
+        color = self.countryBorderColor;
+    }
+    return color;
+}
+
+- (CGFloat)borderWidthForCountry:(NSString *const)country
+{
+    CGFloat width;
+    if ([self.delegate respondsToSelector:@selector(worldMap:borderWidthForCountry:)]) {
+        width = [self.delegate worldMap:self borderWidthForCountry:country];
+    } else {
+        width = self.countryBorderWidth;
+    }
+    return width;
+}
+
 - (UIColor *)highlightedColorForCountry:(NSString *const)country
 {
     UIColor *color;
@@ -228,6 +250,28 @@
     return color;
 }
 
+- (UIColor *)highlightedBorderColorForCountry:(NSString *const)country
+{
+    UIColor *color;
+    if ([self.delegate respondsToSelector:@selector(worldMap:highlightedBorderColorForCountry:)]) {
+        color = [self.delegate worldMap:self highlightedBorderColorForCountry:country];
+    } else {
+        color = self.highlightedBorderColor;
+    }
+    return color;
+}
+
+- (CGFloat)highlightedBorderWidthForCountry:(NSString *const)country
+{
+    CGFloat width;
+    if ([self.delegate respondsToSelector:@selector(worldMap:highlightedBorderWidthForCountry:)]) {
+        width = [self.delegate worldMap:self highlightedBorderWidthForCountry:country];
+    } else {
+        width = self.highlightedBorderWidth;
+    }
+    return width;
+}
+
 - (UIColor *)selectedColorForCountry:(NSString *const)country
 {
     UIColor *color;
@@ -237,6 +281,28 @@
         color = self.selectedColor;
     }
     return color;
+}
+
+- (UIColor *)selectedBorderColorForCountry:(NSString *const)country
+{
+    UIColor *color;
+    if ([self.delegate respondsToSelector:@selector(worldMap:selectedBorderColorForCountry:)]) {
+        color = [self.delegate worldMap:self selectedBorderColorForCountry:country];
+    } else {
+        color = self.selectedBorderColor;
+    }
+    return color;
+}
+
+- (CGFloat)selectedBorderWidthForCountry:(NSString *const)country
+{
+    CGFloat width;
+    if ([self.delegate respondsToSelector:@selector(worldMap:selectedBorderWidthForCountry:)]) {
+        width = [self.delegate worldMap:self selectedBorderWidthForCountry:country];
+    } else {
+        width = self.selectedBorderWidth;
+    }
+    return width;
 }
 
 #pragma mark - UIView
@@ -261,8 +327,6 @@
     UIEdgeInsets const mapInset = self.mapInset;
     CGSize const size = CGSizeMake(self.bounds.size.width - mapInset.left - mapInset.right,
                                    self.bounds.size.height - mapInset.top - mapInset.bottom);
-    UIColor *const countryBorderColor = self.countryBorderColor;
-    CGFloat const countryBorderWidth = self.countryBorderWidth;
     CGLineJoin const countryBorderJoin = (self.countryBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter);
     
     for (NSString *const key in map.allKeys) {
@@ -272,7 +336,8 @@
         for (NSArray *const coords in parts) {
             
             UIBezierPath *const path = [UIBezierPath bezierPath];
-            [path setLineWidth:countryBorderWidth];
+            CGFloat const borderWidth = [self borderWidthForCountry:key];
+            [path setLineWidth:borderWidth];
             [path setLineJoinStyle:countryBorderJoin];
             
             components = coords.firstObject;
@@ -298,18 +363,31 @@
             
             [path closePath];
             
-            [countryBorderColor set];
+            UIColor *const borderColor = [self borderColorForCountry:key];
+            [borderColor set];
             [path stroke];
             
             UIColor *const colorForCountry = [self colorForCountry:key];
             [colorForCountry set];
-            
             [path fill];
             
             if ([path containsPoint:_selectPoint]) {
-                [selectedCountries addObject:key];
+                if ([self.delegate respondsToSelector:@selector(worldMap:shouldSelectCountry:)]) {
+                    if ([self.delegate worldMap:self shouldSelectCountry:key]) {
+                        [selectedCountries addObject:key];
+                    }
+                } else {
+                    [selectedCountries addObject:key];
+                }
             } else if ([path containsPoint:_highlightPoint]) {
-                [highlightedCountries addObject:key];
+                if ([self.delegate respondsToSelector:@selector(worldMap:shouldHighlightCountry:)]) {
+                    if ([self.delegate worldMap:self shouldHighlightCountry:key]) {
+                        [highlightedCountries addObject:key];
+                    }
+                } else {
+                    [highlightedCountries addObject:key];
+                }
+                
             }
         }
     }
@@ -321,11 +399,13 @@
     }
     for (NSString *const key in highlightedCountries) {
         UIColor *const colorForCountry = [self highlightedColorForCountry:key];
+        UIColor *const borderColor = [self highlightedBorderColorForCountry:key];
+        CGFloat const borderWidth = [self highlightedBorderWidthForCountry:key];
         [self drawHighlightInRect:rect
                        forCountry:key
                         withColor:colorForCountry
-                      borderColor:self.highlightedBorderColor
-                      borderWidth:self.highlightedBorderWidth
+                      borderColor:borderColor
+                      borderWidth:borderWidth
                         joinStyle:(self.highlightedBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter)
                            shadow:NO];
     }
@@ -338,11 +418,13 @@
     }
     for (NSString *const key in selectedCountries) {
         UIColor *const colorForCountry = [self selectedColorForCountry:key];
+        UIColor *const borderColor = [self selectedBorderColorForCountry:key];
+        CGFloat const borderWidth = [self selectedBorderWidthForCountry:key];
         [self drawHighlightInRect:rect
                        forCountry:key
                         withColor:colorForCountry
-                      borderColor:self.selectedBorderColor
-                      borderWidth:self.selectedBorderWidth
+                      borderColor:borderColor
+                      borderWidth:borderWidth
                         joinStyle:(self.selectedBorderRounded ? kCGLineJoinRound : kCGLineJoinMiter)
                            shadow:YES];
     }
