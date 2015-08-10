@@ -58,6 +58,7 @@
     [super viewDidLoad];
     self.scrollView.minimumZoomScale = 1.0f;
     self.scrollView.maximumZoomScale = 4.0f;
+    self.worldMapView.mapInset = UIEdgeInsetsMake(50.0f, 0.0f, 0.0f, 0.0f);
 }
 
 @end
