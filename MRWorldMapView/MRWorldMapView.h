@@ -144,6 +144,33 @@
  */
 - (CGFloat)worldMap:(MRWorldMapView *)map highlightedBorderWidthForCountry:(NSString *)code;
 
+/**
+ Should return the color to be used as fill color for the country with the given `code` when disabled.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The `UIColor` to be used as fill color for the country when disabled.
+ */
+- (UIColor *)worldMap:(MRWorldMapView *)map disabledColorForCountry:(NSString *)code;
+
+/**
+ Should return the color to be used as border color for the country with the given `code` when disabled.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The `UIColor` to be used as border color for the country when disabled.
+ */
+- (UIColor *)worldMap:(MRWorldMapView *)map disabledBorderColorForCountry:(NSString *)code;
+
+/**
+ Should return the width of the border for the country with the given `code` when disabled.
+ 
+ @param map The world map object that is making this request.
+ @param code The country ISO code.
+ @return The width of the border for the country when disabled.
+ */
+- (CGFloat)worldMap:(MRWorldMapView *)map disabledBorderWidthForCountry:(NSString *)code;
+
 @end
 
 
@@ -215,7 +242,7 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat highlightedBorderWidth;
 
 /**
- Whether highlighted country border line join style.
+ Whether highlighted country border line join style is rounded or not.
  */
 @property (nonatomic, assign) IBInspectable BOOL highlightedBorderRounded;
 
@@ -235,10 +262,9 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat selectedBorderWidth;
 
 /**
- Whether selected country border line join style.
+ Whether selected country border line join style is rounded or not.
  */
 @property (nonatomic, assign) IBInspectable BOOL selectedBorderRounded;
-
 
 /**
  Selected country border shadow color.
@@ -256,6 +282,26 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat selectedShadowBlur;
 
 /**
+ Default disabled country fill color.
+ */
+@property (nonatomic, strong) IBInspectable UIColor *disabledColor;
+
+/**
+ Disabled country border color.
+ */
+@property (nonatomic, strong) IBInspectable UIColor *disabledBorderColor;
+
+/**
+ Disabled country border width.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat disabledBorderWidth;
+
+/**
+ Whether disabled country border line join style is rounded or not.
+ */
+@property (nonatomic, assign) IBInspectable BOOL disabledBorderRounded;
+
+/**
  Currently highlighted country code.
  */
 @property (nonatomic, strong) IBInspectable NSString *highlightedCountry;
@@ -264,6 +310,20 @@ IB_DESIGNABLE
  Currently selected country code.
  */
 @property (nonatomic, strong) IBInspectable NSString *selectedCountry;
+
+/**
+ All countries.
+ 
+ @return A set with the codes of all the countries contained in the map (including disabled and hidden ones).
+ */
+- (NSSet *)allCountries;
+
+/**
+ Disabled countries.
+ 
+ Countries in this set will not be selected or highlighted.
+ */
+@property (nonatomic, strong) NSSet *disabledCountries;
 
 /**
  Set of countries that will not be displayed on the map.
