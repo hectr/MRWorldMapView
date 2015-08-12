@@ -283,4 +283,12 @@ IB_DESIGNABLE
  */
 - (NSString *)countryAtPoint:(CGPoint)point;
 
+/**
+ Returns the rect of the bounding box of the given counrty.
+ 
+ @param country The code of the country whose bounding box you want to retrieve.
+ @return The rect of the bounding box of the country.
+ */
+- (CGRect)boundingBoxForCountry:(NSString *)country;
+
 @end

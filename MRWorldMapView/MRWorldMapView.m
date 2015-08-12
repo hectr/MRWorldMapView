@@ -64,6 +64,41 @@
     return countryAtPoint;
 }
 
+- (CGRect)boundingBoxForCountry:(NSString *const)country
+{
+    CGPoint const minPoint = self.minPoint;
+    CGPoint const maxPoint = self.maxPoint;
+    UIEdgeInsets const mapInset = self.mapInset;
+    CGSize const mapSize = CGSizeMake(self.bounds.size.width - mapInset.left - mapInset.right,
+                                      self.bounds.size.height - mapInset.top - mapInset.bottom);
+
+    CGPoint min = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
+    CGPoint max = CGPointMake(0.0f, 0.0f);
+    
+    NSArray *const parts = _map[country];
+    for (NSArray *const coords in parts) {
+        for (NSArray *const components in coords) {
+            
+            CGPoint point = CGPointMake([components.firstObject floatValue], [components.lastObject floatValue]);
+            CGFloat const x = mapInset.left + (point.x - minPoint.x)/(maxPoint.x - minPoint.x)*mapSize.width;
+            CGFloat const y = mapInset.top + (point.y - minPoint.y)/(maxPoint.y - minPoint.y)*mapSize.height;
+            
+            if (x < min.x) {
+                min.x = x;
+            } else if (x > max.x) {
+                max.x = x;
+            }
+            if (y < min.y) {
+                min.y = y;
+            } else if (y > max.y) {
+                max.y = y;
+            }
+        }
+    }
+    
+    return CGRectMake(min.x, min.y, max.x - min.x, max.y - min.y);
+}
+
 #pragma mark Private
 
 - (void)mr_commonInit
