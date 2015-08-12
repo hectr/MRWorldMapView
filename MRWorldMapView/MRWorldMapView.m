@@ -28,6 +28,42 @@
 
 @implementation MRWorldMapView
 
+- (NSString *)countryAtPoint:(CGPoint const)point
+{
+    NSString *countryAtPoint;
+    
+    NSDictionary *const map = self.map;
+    UIEdgeInsets const mapInset = self.mapInset;
+    CGSize const size = CGSizeMake(self.bounds.size.width - mapInset.left - mapInset.right,
+                                   self.bounds.size.height - mapInset.top - mapInset.bottom);
+    
+    for (NSString *const key in map.allKeys) {
+        
+        NSArray *const parts = map[key];
+        
+        for (NSArray *const coords in parts) {
+        
+            UIBezierPath *const path = [UIBezierPath bezierPath];
+            
+            CGPoint const startPoint = [self mr_pointAtIndex:0 fromCoords:coords withMapInset:mapInset andSize:size];
+            [path moveToPoint:startPoint];
+            
+            for (int j = 1; j < [coords count] - 1; j++) {
+                CGPoint const nextPoint = [self mr_pointAtIndex:(j + 1) fromCoords:coords withMapInset:mapInset andSize:size];
+                [path addLineToPoint:nextPoint];
+            }
+            [path closePath];
+            
+            if ([path containsPoint:point]) {
+                countryAtPoint = key;
+                break;
+            }
+        }
+    }
+    
+    return countryAtPoint;
+}
+
 #pragma mark Private
 
 - (void)mr_commonInit

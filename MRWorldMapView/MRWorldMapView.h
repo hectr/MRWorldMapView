@@ -275,4 +275,12 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) IBOutlet id <MRWorldMapViewDelegate> delegate;
 
+/**
+ Returns the country that contains the given point.
+ 
+ @param point The point that you want to check.
+ @return The code of the country that contains the point.
+ */
+- (NSString *)countryAtPoint:(CGPoint)point;
+
 @end
