@@ -273,7 +273,7 @@ IB_DESIGNABLE
 /**
  Delegate that will be notified when the selected or highlighted countries change.
  */
-@property (nonatomic, assign) IBOutlet id <MRWorldMapViewDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id <MRWorldMapViewDelegate> delegate;
 
 /**
  Returns the country that contains the given point.
