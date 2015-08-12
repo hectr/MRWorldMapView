@@ -113,7 +113,7 @@
     _countryBorderWidth = 1.0f;
     _countryBorderRounded = NO;
     
-    _highlightedColor = UIColor.grayColor;
+    _highlightedColor = nil;
     _highlightedBorderColor = UIColor.darkGrayColor;
     _highlightedBorderWidth = 1.0f;
     _highlightedBorderRounded = NO;
@@ -227,7 +227,7 @@
     if ([self.delegate respondsToSelector:@selector(worldMap:highlightedColorForCountry:)]) {
         color = [self.delegate worldMap:self highlightedColorForCountry:country];
     } else {
-        color = self.highlightedColor;
+        color = (self.highlightedColor ?: self.countryColor);
     }
     return color;
 }
@@ -238,7 +238,7 @@
     if ([self.delegate respondsToSelector:@selector(worldMap:highlightedBorderColorForCountry:)]) {
         color = [self.delegate worldMap:self highlightedBorderColorForCountry:country];
     } else {
-        color = self.highlightedBorderColor;
+        color = (self.highlightedBorderColor ?: self.countryBorderColor);
     }
     return color;
 }
@@ -260,7 +260,7 @@
     if ([self.delegate respondsToSelector:@selector(worldMap:selectedColorForCountry:)]) {
         color = [self.delegate worldMap:self selectedColorForCountry:country];
     } else {
-        color = self.selectedColor;
+        color = (self.selectedColor ?: self.countryColor);
     }
     return color;
 }
@@ -271,7 +271,7 @@
     if ([self.delegate respondsToSelector:@selector(worldMap:selectedBorderColorForCountry:)]) {
         color = [self.delegate worldMap:self selectedBorderColorForCountry:country];
     } else {
-        color = self.selectedBorderColor;
+        color = (self.selectedBorderColor ?: self.countryBorderColor);
     }
     return color;
 }
