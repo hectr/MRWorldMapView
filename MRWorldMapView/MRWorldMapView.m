@@ -110,7 +110,7 @@
 - (void)setMap:(NSDictionary *)map
 {
     [self willChangeValueForKey:@"map"];
-    _map = map;
+    _map = map.copy;
     [self mr_setMinMaxPoints];
     [self didChangeValueForKey:@"map"];
     [self setNeedsDisplay];

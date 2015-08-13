@@ -187,7 +187,7 @@ IB_DESIGNABLE
 /**
  The dictionary with the world map data.
  */
-@property (nonatomic, strong) NSDictionary *map;
+@property (nonatomic, copy) NSDictionary *map;
 
 /**
  The distance that the map is inset from the edges of the view.
@@ -323,7 +323,7 @@ IB_DESIGNABLE
  
  Countries in this set will not be selected or highlighted.
  */
-@property (nonatomic, strong) NSSet *disabledCountries;
+@property (nonatomic, copy) NSSet *disabledCountries;
 
 /**
  Set of countries that will not be displayed on the map.
