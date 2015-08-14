@@ -20,6 +20,9 @@
 #import "MRWorldMapView.h"
 
 
+static NSString * __errorDomain;
+
+
 @interface MRWorldMapView ()
 @property (nonatomic, assign) CGPoint minPoint;
 @property (nonatomic, assign) CGPoint maxPoint;
@@ -27,6 +30,39 @@
 
 
 @implementation MRWorldMapView
+
++ (void)initialize
+{
+    __errorDomain = NSStringFromClass(self);
+}
+
+- (BOOL)loadGeoJSONMap:(id const)geoJSON withError:(NSError **const)errorPtr
+{
+    NSArray *features;
+    if ([geoJSON isKindOfClass:NSDictionary.class]) {
+        features = geoJSON[@"features"];
+        if (features == nil) {
+            NSString *const reason = NSLocalizedString(@"Map doesn't contain any feature", nil);
+            *errorPtr = [self mr_buildErrorWithCode:-1 andReason:reason];
+            return NO;
+        }
+    } else if ([geoJSON isKindOfClass:NSArray.class]) {
+        features = geoJSON;
+    } else {
+        if (errorPtr) {
+            NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected JSON type: %@", nil)
+                                      , NSStringFromClass([geoJSON class])];
+            *errorPtr = [self mr_buildErrorWithCode:0 andReason:reason];
+        }
+        return NO;
+    }
+    NSError *error = nil;
+    [self mr_loadGeoJSONFeatures:features error:&error];
+    if (errorPtr) {
+        *errorPtr = error;
+    }
+    return YES;
+}
 
 - (NSString *)countryAtPoint:(CGPoint const)point
 {
@@ -230,6 +266,136 @@
     
     self.minPoint = min;
     self.maxPoint = max;
+}
+
+- (void)mr_loadGeoJSONFeatures:(NSArray *const)features error:(NSError **const)errorPtr
+{
+    NSParameterAssert(errorPtr);
+    NSMutableDictionary *const map = [NSMutableDictionary dictionaryWithCapacity:features.count];
+    for (NSDictionary *const feature in features) {
+        if (![feature isKindOfClass:NSDictionary.class]) {
+            NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected feature type: %@", nil)
+                                      , NSStringFromClass(feature.class)];
+            *errorPtr = [self mr_buildErrorWithCode:1 andReason:reason];
+            continue;
+        }
+        [self mr_addGeoJSONFeature:feature
+                             toMap:map
+                             error:errorPtr];
+    }
+    self.map = map;
+}
+
+- (void)mr_addGeoJSONFeature:(NSDictionary *const)feature
+                       toMap:(NSMutableDictionary *const)map
+                       error:(NSError **const)errorPtr
+{
+    NSString *const featureType = feature[@"type"];
+    NSString *identifier = feature[@"id"];
+    if (identifier == nil) {
+        NSDictionary *const properties = feature[@"properties"];
+        if ([properties isKindOfClass:NSDictionary.class]) {
+            identifier = properties[@"name"];
+            NSLog(@"missing identifier for %@", identifier);
+        } else if (properties) {
+            NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected properties type: %@", nil)
+                                      , NSStringFromClass(properties.class)];
+            *errorPtr = [self mr_buildErrorWithCode:6 andReason:reason];
+        }
+    }
+    if (identifier) {
+        if ([featureType isEqual:@"Feature"]) {
+            NSDictionary *const geometry = feature[@"geometry"];
+            if ([geometry isKindOfClass:NSDictionary.class]) {
+                NSString *const geometryType = geometry[@"type"];
+                NSArray *const coordinates = geometry[@"coordinates"];
+                if ([geometryType isEqual:@"Polygon"]) {
+                    if (![coordinates isKindOfClass:NSArray.class]) {
+                        NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected coordinates type: %@", nil)
+                                                  , NSStringFromClass(coordinates.class)];
+                        *errorPtr = [self mr_buildErrorWithCode:5 andReason:reason];
+                    } else {
+                        NSMutableArray *const parts = [NSMutableArray arrayWithCapacity:coordinates.count];
+                        for (NSArray *const part in coordinates) {
+                            if (![part isKindOfClass:NSArray.class]) {
+                                NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected part type: %@", nil)
+                                                          , NSStringFromClass(part.class)];
+                                *errorPtr = [self mr_buildErrorWithCode:7 andReason:reason];
+                                continue;
+                            }
+                            NSArray *const projected = [self mr_projectPoints:part withError:errorPtr];
+                            [parts addObject:projected];
+                        }
+                        [map setObject:parts forKey:identifier];
+                    }
+                } else if ([geometryType isEqual:@"MultiPolygon"]) {
+                    NSMutableArray *const parts = NSMutableArray.array;
+                    for (NSArray *const polygon in coordinates) {
+                        if (![polygon isKindOfClass:NSArray.class]) {
+                            NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected polygon type: %@", nil)
+                                                      , NSStringFromClass(polygon.class)];
+                            *errorPtr = [self mr_buildErrorWithCode:4 andReason:reason];
+                            continue;
+                        }
+                        for (NSArray *const part in polygon) {
+                            if (![part isKindOfClass:NSArray.class]) {
+                                NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected part type: %@", nil)
+                                                          , NSStringFromClass(part.class)];
+                                *errorPtr = [self mr_buildErrorWithCode:3 andReason:reason];
+                                continue;
+                            }
+                            NSArray *const projected = [self mr_projectPoints:part withError:errorPtr];
+                            [parts addObject:projected];
+                        }
+                    }
+                    [map setObject:parts forKey:identifier];
+                } else {
+                    NSLog(@"ignoring %@ in %@ (%@)", geometryType, featureType, identifier);
+                }
+            } else {
+                NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected geometry type: %@", nil)
+                                          , NSStringFromClass(geometry.class)];
+                *errorPtr = [self mr_buildErrorWithCode:2 andReason:reason];
+            }
+        } else {
+            NSLog(@"ignoring %@ (%@)", featureType, identifier);
+        }
+    } else {
+        NSLog(@"skipping unidentified feature", nil);
+    }
+}
+
+- (NSArray *)mr_projectPoints:(NSArray *const)points
+                    withError:(NSError **const)errorPtr
+{
+    static double const RADIUS = 6378137.0;
+    static double const MAX = 85.0511287798;
+    static double const RADIANS = M_PI/180;
+    NSMutableArray *const projected = [NSMutableArray arrayWithCapacity:points.count];
+    for (NSArray *const coord in points) {
+        if (![coord isKindOfClass:NSArray.class]) {
+            NSString *const reason = [NSString stringWithFormat:NSLocalizedString(@"Unexpected point type: %@", nil)
+                                      , NSStringFromClass(coord.class)];
+            *errorPtr = [self mr_buildErrorWithCode:7 andReason:reason];
+            continue;
+        }
+        CGPoint point;
+        CGFloat const longitude = [coord.firstObject floatValue];
+        CGFloat const latitude = [coord.lastObject floatValue];
+        point.x = RADIUS * longitude * RADIANS;
+        point.y = MAX(MIN(MAX, latitude), -MAX) * RADIANS;
+        point.y = RADIUS * log(tan((M_PI / 4) + (point.y / 2)));
+        [projected addObject:@[ @(point.x), @(-point.y) ]];
+    }
+    return projected;
+}
+
+- (NSError *)mr_buildErrorWithCode:(NSInteger)code andReason:(NSString *const)reason
+{
+    NSError *const error = [NSError errorWithDomain:__errorDomain
+                                               code:code
+                                           userInfo:@{ NSLocalizedFailureReasonErrorKey: reason } ];
+    return error;
 }
 
 - (UIColor *)mr_colorForBackgroundGradient:(float const)value
@@ -482,8 +648,8 @@
     
     [self mr_drawBackground];
     
-    NSMutableArray *const highlightedCountries = NSMutableArray.array;
-    NSMutableArray *const selectedCountries = NSMutableArray.array;
+    NSMutableArray *const highlightedCountries = [NSMutableArray arrayWithCapacity:1];
+    NSMutableArray *const selectedCountries = [NSMutableArray arrayWithCapacity:1];
     
     NSDictionary *const map = self.map;
     UIEdgeInsets const mapInset = self.mapInset;

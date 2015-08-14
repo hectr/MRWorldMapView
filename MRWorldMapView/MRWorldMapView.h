@@ -336,6 +336,15 @@ IB_DESIGNABLE
 @property (nonatomic, weak) IBOutlet id <MRWorldMapViewDelegate> delegate;
 
 /**
+ Loads the map from the given GeoJSON object.
+ 
+ @param geoJSON A GeoJSON feature collection.
+ @param errorPtr The error object containing the reason the map could not be loaded.
+ @return `YES` if the map has been loaded; otherwise `NO`.
+ */
+- (BOOL)loadGeoJSONMap:(id)geoJSON withError:(NSError **)errorPtr;
+
+/**
  Returns the country that contains the given point.
  
  @param point The point that you want to check.
