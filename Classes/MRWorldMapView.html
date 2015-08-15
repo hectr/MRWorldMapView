@@ -62,23 +62,45 @@
 		
 		<option value="//api/name/countryBorderColor">countryBorderColor</option>
 		
+		<option value="//api/name/countryBorderRounded">countryBorderRounded</option>
+		
+		<option value="//api/name/countryBorderWidth">countryBorderWidth</option>
+		
 		<option value="//api/name/countryColor">countryColor</option>
 		
 		<option value="//api/name/delegate">delegate</option>
 		
+		<option value="//api/name/disabledBorderColor">disabledBorderColor</option>
+		
+		<option value="//api/name/disabledBorderRounded">disabledBorderRounded</option>
+		
+		<option value="//api/name/disabledBorderWidth">disabledBorderWidth</option>
+		
+		<option value="//api/name/disabledColor">disabledColor</option>
+		
+		<option value="//api/name/disabledCountries">disabledCountries</option>
+		
+		<option value="//api/name/hiddenCountries">hiddenCountries</option>
+		
 		<option value="//api/name/highlightedBorderColor">highlightedBorderColor</option>
+		
+		<option value="//api/name/highlightedBorderRounded">highlightedBorderRounded</option>
+		
+		<option value="//api/name/highlightedBorderWidth">highlightedBorderWidth</option>
 		
 		<option value="//api/name/highlightedColor">highlightedColor</option>
 		
 		<option value="//api/name/highlightedCountry">highlightedCountry</option>
 		
-		<option value="//api/name/horizontalRatioDivisor">horizontalRatioDivisor</option>
-		
 		<option value="//api/name/map">map</option>
 		
-		<option value="//api/name/mapHorizontalPadding">mapHorizontalPadding</option>
+		<option value="//api/name/mapInset">mapInset</option>
 		
 		<option value="//api/name/selectedBorderColor">selectedBorderColor</option>
+		
+		<option value="//api/name/selectedBorderRounded">selectedBorderRounded</option>
+		
+		<option value="//api/name/selectedBorderWidth">selectedBorderWidth</option>
 		
 		<option value="//api/name/selectedColor">selectedColor</option>
 		
@@ -90,13 +112,23 @@
 		
 		<option value="//api/name/selectedShadowOffset">selectedShadowOffset</option>
 		
-		<option value="//api/name/verticalRatioDivisor">verticalRatioDivisor</option>
-		
 	</optgroup>
 	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/allCountries">- allCountries</option>
+		
+		<option value="//api/name/boundingBoxForCountry:">- boundingBoxForCountry:</option>
+		
+		<option value="//api/name/countryAtPoint:">- countryAtPoint:</option>
+		
+		<option value="//api/name/loadGeoJSONMap:withError:">- loadGeoJSONMap:withError:</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -162,7 +194,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableDictionary *map</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *map</code></div>
 
 		    
 			
@@ -192,8 +224,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/horizontalRatioDivisor" title="horizontalRatioDivisor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/horizontalRatioDivisor">&nbsp;&nbsp;horizontalRatioDivisor</a></code>
+	<a name="//api/name/mapInset" title="mapInset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapInset">&nbsp;&nbsp;mapInset</a></code>
 </h3>
 
 	<div class="method-info">
@@ -203,12 +235,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Use this for adjusting the horizontal ratio to your <a href="#//api/name/map">map</a> data.</p>
+				<p>The distance that the <a href="#//api/name/map">map</a> is inset from the edges of the view.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable NSInteger horizontalRatioDivisor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIEdgeInsets mapInset</code></div>
 
 		    
 			
@@ -220,99 +252,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Use this for adjusting the horizontal ratio to your <a href="#//api/name/map">map</a> data.</p>
-			</div>
-			
+				<p>The distance that the <a href="#//api/name/map">map</a> is inset from the edges of the view.</p>
 
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/verticalRatioDivisor" title="verticalRatioDivisor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verticalRatioDivisor">&nbsp;&nbsp;verticalRatioDivisor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Use this for adjusting the verticat ratio to your <a href="#//api/name/map">map</a> data.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable NSInteger verticalRatioDivisor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Use this for adjusting the verticat ratio to your <a href="#//api/name/map">map</a> data.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/mapHorizontalPadding" title="mapHorizontalPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mapHorizontalPadding">&nbsp;&nbsp;mapHorizontalPadding</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The horizontal padding between the world <a href="#//api/name/map">map</a> and the view&rsquo;s borders.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat mapHorizontalPadding</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The horizontal padding between the world <a href="#//api/name/map">map</a> and the view&rsquo;s borders.</p>
+<p>You can use this value to adjust map&rsquo;s aspect ratio.</p>
 			</div>
 			
 
@@ -514,6 +456,98 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/countryBorderWidth" title="countryBorderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countryBorderWidth">&nbsp;&nbsp;countryBorderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Country border width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat countryBorderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Country border width.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countryBorderRounded" title="countryBorderRounded"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countryBorderRounded">&nbsp;&nbsp;countryBorderRounded</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether country border line join style is rounded or not.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL countryBorderRounded</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether country border line join style is rounded or not.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/highlightedColor" title="highlightedColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/highlightedColor">&nbsp;&nbsp;highlightedColor</a></code>
 </h3>
@@ -589,6 +623,98 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Highlighted country border color.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/highlightedBorderWidth" title="highlightedBorderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/highlightedBorderWidth">&nbsp;&nbsp;highlightedBorderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Highlighted country border width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat highlightedBorderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Highlighted country border width.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/highlightedBorderRounded" title="highlightedBorderRounded"></a>
+	<h3 class="method-title"><code><a href="#//api/name/highlightedBorderRounded">&nbsp;&nbsp;highlightedBorderRounded</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether highlighted country border line join style is rounded or not.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL highlightedBorderRounded</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether highlighted country border line join style is rounded or not.</p>
 			</div>
 			
 
@@ -698,6 +824,98 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/selectedBorderWidth" title="selectedBorderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectedBorderWidth">&nbsp;&nbsp;selectedBorderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Selected country border width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat selectedBorderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Selected country border width.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selectedBorderRounded" title="selectedBorderRounded"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectedBorderRounded">&nbsp;&nbsp;selectedBorderRounded</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether selected country border line join style is rounded or not.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL selectedBorderRounded</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether selected country border line join style is rounded or not.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/selectedShadowColor" title="selectedShadowColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/selectedShadowColor">&nbsp;&nbsp;selectedShadowColor</a></code>
 </h3>
@@ -773,8 +991,6 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Selected country border shadow offset.</p>
-
-<p>You should provide the shadow offset inverted, because of the transform applied to the view.</p>
 			</div>
 			
 
@@ -821,6 +1037,190 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Selected country border shadow blur.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledColor" title="disabledColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledColor">&nbsp;&nbsp;disabledColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Default disabled country fill color.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) IBInspectable UIColor *disabledColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Default disabled country fill color.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledBorderColor" title="disabledBorderColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledBorderColor">&nbsp;&nbsp;disabledBorderColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disabled country border color.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) IBInspectable UIColor *disabledBorderColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Disabled country border color.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledBorderWidth" title="disabledBorderWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledBorderWidth">&nbsp;&nbsp;disabledBorderWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disabled country border width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable CGFloat disabledBorderWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Disabled country border width.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledBorderRounded" title="disabledBorderRounded"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledBorderRounded">&nbsp;&nbsp;disabledBorderRounded</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether disabled country border line join style is rounded or not.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBInspectable BOOL disabledBorderRounded</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether disabled country border line join style is rounded or not.</p>
 			</div>
 			
 
@@ -930,6 +1330,151 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/allCountries" title="allCountries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allCountries">&ndash;&nbsp;allCountries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>All countries.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSSet *)allCountries</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A set with the codes of all the countries contained in the <a href="#//api/name/map">map</a> (including disabled and hidden ones).</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>All countries.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledCountries" title="disabledCountries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledCountries">&nbsp;&nbsp;disabledCountries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disabled countries.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSSet *disabledCountries</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Disabled countries.</p>
+
+<p>Countries in this set will not be selected or highlighted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hiddenCountries" title="hiddenCountries"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hiddenCountries">&nbsp;&nbsp;hiddenCountries</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set of countries that will not be displayed on the <a href="#//api/name/map">map</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSSet *hiddenCountries</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set of countries that will not be displayed on the <a href="#//api/name/map">map</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/delegate" title="delegate"></a>
 	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 </h3>
@@ -946,7 +1491,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBOutlet id&lt;MRWorldMapViewDelegate&gt; delegate</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) IBOutlet id&lt;MRWorldMapViewDelegate&gt; delegate</code></div>
 
 		    
 			
@@ -959,6 +1504,202 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Delegate that will be notified when the selected or highlighted countries change.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadGeoJSONMap:withError:" title="loadGeoJSONMap:withError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadGeoJSONMap:withError:">&ndash;&nbsp;loadGeoJSONMap:withError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the <a href="#//api/name/map">map</a> from the given <strong>GeoJSON</strong> <code>NSDictionary</code> or <code>NSArray</code> object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)loadGeoJSONMap:(id)<em>geoJSON</em> withError:(NSError **)<em>errorPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>geoJSON</code></th>
+						<td><p>A <strong>GeoJSON</strong> feature collection.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errorPtr</code></th>
+						<td><p>The error object containing the reason the <a href="#//api/name/map">map</a> could not be loaded.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the <a href="#//api/name/map">map</a> has been loaded; otherwise <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Loads the <a href="#//api/name/map">map</a> from the given <strong>GeoJSON</strong> <code>NSDictionary</code> or <code>NSArray</code> object.</p>
+
+<p><code>Polygon</code> and <code>MultiPolygon</code> objects will be treated as countries, any other <em>geometry object</em> will be ignored.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countryAtPoint:" title="countryAtPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countryAtPoint:">&ndash;&nbsp;countryAtPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the country that contains the given point.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)countryAtPoint:(CGPoint)<em>point</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>point</code></th>
+						<td><p>The point that you want to check.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The code of the country that contains the point.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the country that contains the given point.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/boundingBoxForCountry:" title="boundingBoxForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/boundingBoxForCountry:">&ndash;&nbsp;boundingBoxForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the rect of the bounding box of the given counrty.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGRect)boundingBoxForCountry:(NSString *)<em>country</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>country</code></th>
+						<td><p>The code of the country whose bounding box you want to retrieve.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The rect of the bounding box of the country.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the rect of the bounding box of the given counrty.</p>
 			</div>
 			
 
@@ -990,7 +1731,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Héctor Marqués. All rights reserved. Updated: 2015-07-26</p>
+						<p class="copyright">Copyright &copy; 2015 Héctor Marqués. All rights reserved. Updated: 2015-08-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -60,15 +60,37 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/worldMap:borderColorForCountry:">- worldMap:borderColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:borderWidthForCountry:">- worldMap:borderWidthForCountry:</option>
+		
 		<option value="//api/name/worldMap:colorForCountry:">- worldMap:colorForCountry:</option>
 		
 		<option value="//api/name/worldMap:didHighlightCountry:">- worldMap:didHighlightCountry:</option>
 		
 		<option value="//api/name/worldMap:didSelectCountry:">- worldMap:didSelectCountry:</option>
 		
+		<option value="//api/name/worldMap:disabledBorderColorForCountry:">- worldMap:disabledBorderColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:disabledBorderWidthForCountry:">- worldMap:disabledBorderWidthForCountry:</option>
+		
+		<option value="//api/name/worldMap:disabledColorForCountry:">- worldMap:disabledColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:highlightedBorderColorForCountry:">- worldMap:highlightedBorderColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:highlightedBorderWidthForCountry:">- worldMap:highlightedBorderWidthForCountry:</option>
+		
 		<option value="//api/name/worldMap:highlightedColorForCountry:">- worldMap:highlightedColorForCountry:</option>
 		
+		<option value="//api/name/worldMap:selectedBorderColorForCountry:">- worldMap:selectedBorderColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:selectedBorderWidthForCountry:">- worldMap:selectedBorderWidthForCountry:</option>
+		
 		<option value="//api/name/worldMap:selectedColorForCountry:">- worldMap:selectedColorForCountry:</option>
+		
+		<option value="//api/name/worldMap:shouldHighlightCountry:">- worldMap:shouldHighlightCountry:</option>
+		
+		<option value="//api/name/worldMap:shouldSelectCountry:">- worldMap:shouldSelectCountry:</option>
 		
 	</optgroup>
 	
@@ -120,6 +142,74 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/worldMap:shouldHighlightCountry:" title="worldMap:shouldHighlightCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:shouldHighlightCountry:">&ndash;&nbsp;worldMap:shouldHighlightCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the delegate if the specified country should be highlighted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)worldMap:(MRWorldMapView *)<em>map</em> shouldHighlightCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The code of the country being highlighted.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the country should be highlighted or <code>NO</code> if it should not.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Asks the delegate if the specified country should be highlighted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/worldMap:didHighlightCountry:" title="worldMap:didHighlightCountry:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/worldMap:didHighlightCountry:">&ndash;&nbsp;worldMap:didHighlightCountry:</a></code>
 </h3>
@@ -166,6 +256,74 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Notifies that the country with the given <code>code</code> has been highlighted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:shouldSelectCountry:" title="worldMap:shouldSelectCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:shouldSelectCountry:">&ndash;&nbsp;worldMap:shouldSelectCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the delegate if the specified country should be selected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)worldMap:(MRWorldMapView *)<em>map</em> shouldSelectCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The code of the country being selected.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the country should be selected or <code>NO</code> if it should not.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Asks the delegate if the specified country should be selected.</p>
 			</div>
 			
 
@@ -314,6 +472,142 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/worldMap:borderColorForCountry:" title="worldMap:borderColorForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:borderColorForCountry:">&ndash;&nbsp;worldMap:borderColorForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the color to be used as border color for the country with the given <code>code</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIColor *)worldMap:(MRWorldMapView *)<em>map</em> borderColorForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The <code>UIColor</code> to be used as border color for the country.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the color to be used as border color for the country with the given <code>code</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:borderWidthForCountry:" title="worldMap:borderWidthForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:borderWidthForCountry:">&ndash;&nbsp;worldMap:borderWidthForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the width of the border for the country with the given <code>code</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)worldMap:(MRWorldMapView *)<em>map</em> borderWidthForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The width of the border for the country.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the width of the border for the country with the given <code>code</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/worldMap:selectedColorForCountry:" title="worldMap:selectedColorForCountry:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/worldMap:selectedColorForCountry:">&ndash;&nbsp;worldMap:selectedColorForCountry:</a></code>
 </h3>
@@ -365,6 +659,142 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Should return the color to be used as fill color for the country with the given <code>code</code> when selected.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:selectedBorderColorForCountry:" title="worldMap:selectedBorderColorForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:selectedBorderColorForCountry:">&ndash;&nbsp;worldMap:selectedBorderColorForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when selected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIColor *)worldMap:(MRWorldMapView *)<em>map</em> selectedBorderColorForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The <code>UIColor</code> to be used as border color for the country when selected.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when selected.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:selectedBorderWidthForCountry:" title="worldMap:selectedBorderWidthForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:selectedBorderWidthForCountry:">&ndash;&nbsp;worldMap:selectedBorderWidthForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the width of the border for the country with the given <code>code</code> when selected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)worldMap:(MRWorldMapView *)<em>map</em> selectedBorderWidthForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The width of the border for the country when selected.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the width of the border for the country with the given <code>code</code> when selected.</p>
 			</div>
 			
 
@@ -449,6 +879,346 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:highlightedBorderColorForCountry:" title="worldMap:highlightedBorderColorForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:highlightedBorderColorForCountry:">&ndash;&nbsp;worldMap:highlightedBorderColorForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when highlighted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIColor *)worldMap:(MRWorldMapView *)<em>map</em> highlightedBorderColorForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The <code>UIColor</code> to be used as border color for the country when highlighted.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when highlighted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:highlightedBorderWidthForCountry:" title="worldMap:highlightedBorderWidthForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:highlightedBorderWidthForCountry:">&ndash;&nbsp;worldMap:highlightedBorderWidthForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the width of the border for the country with the given <code>code</code> when highlighted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)worldMap:(MRWorldMapView *)<em>map</em> highlightedBorderWidthForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The width of the border for the country when highlighted.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the width of the border for the country with the given <code>code</code> when highlighted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:disabledColorForCountry:" title="worldMap:disabledColorForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:disabledColorForCountry:">&ndash;&nbsp;worldMap:disabledColorForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the color to be used as fill color for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIColor *)worldMap:(MRWorldMapView *)<em>map</em> disabledColorForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The <code>UIColor</code> to be used as fill color for the country when disabled.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the color to be used as fill color for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:disabledBorderColorForCountry:" title="worldMap:disabledBorderColorForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:disabledBorderColorForCountry:">&ndash;&nbsp;worldMap:disabledBorderColorForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIColor *)worldMap:(MRWorldMapView *)<em>map</em> disabledBorderColorForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The <code>UIColor</code> to be used as border color for the country when disabled.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the color to be used as border color for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/worldMap:disabledBorderWidthForCountry:" title="worldMap:disabledBorderWidthForCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/worldMap:disabledBorderWidthForCountry:">&ndash;&nbsp;worldMap:disabledBorderWidthForCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Should return the width of the border for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGFloat)worldMap:(MRWorldMapView *)<em>map</em> disabledBorderWidthForCountry:(NSString *)<em>code</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>map</code></th>
+						<td><p>The world map object that is making this request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>code</code></th>
+						<td><p>The country ISO code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The width of the border for the country when disabled.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Should return the width of the border for the country with the given <code>code</code> when disabled.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MRWorldMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -464,7 +1234,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Héctor Marqués. All rights reserved. Updated: 2015-07-26</p>
+						<p class="copyright">Copyright &copy; 2015 Héctor Marqués. All rights reserved. Updated: 2015-08-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
