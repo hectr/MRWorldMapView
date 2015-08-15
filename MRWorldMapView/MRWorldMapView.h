@@ -336,9 +336,11 @@ IB_DESIGNABLE
 @property (nonatomic, weak) IBOutlet id <MRWorldMapViewDelegate> delegate;
 
 /**
- Loads the map from the given GeoJSON object.
+ Loads the map from the given **GeoJSON** `NSDictionary` or `NSArray` object.
  
- @param geoJSON A GeoJSON feature collection.
+ `Polygon` and `MultiPolygon` objects will be treated as countries, any other *geometry object* will be ignored.
+ 
+ @param geoJSON A **GeoJSON** feature collection.
  @param errorPtr The error object containing the reason the map could not be loaded.
  @return `YES` if the map has been loaded; otherwise `NO`.
  */
