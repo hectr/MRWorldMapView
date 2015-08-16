@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC35D9ACF7E42DD24DCB8ABA"
+               BlueprintIdentifier = "F6831E9811E2E45E34CD8CC7"
                BuildableName = "MRWorldMapView.framework"
                BlueprintName = "MRWorldMapView"
                ReferencedContainer = "container:Pods.xcodeproj">
