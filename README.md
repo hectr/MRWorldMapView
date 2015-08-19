@@ -50,3 +50,7 @@ Other country pickers:
 Other selectable maps:
 
 - <https://github.com/ArthurGuibert/FSInteractiveMap>
+
+GeoJSON handling:
+
+- <https://github.com/mattt/GeoJSONSerialization>
