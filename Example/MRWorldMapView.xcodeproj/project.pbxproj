@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38F4348E701B4084F7681033 /* Pods_MRWorldMapView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F99F9CD62D97D043B9F314 /* Pods_MRWorldMapView_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,9 +21,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6FCA9F2BCB955BB40561D2D7 /* Pods_MRWorldMapView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8ED803012F6BABBFB1239 /* Pods_MRWorldMapView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		734358616E764182D51F33A8 /* Pods_MRWorldMapView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DA5DF52840F4C9CED5D42F /* Pods_MRWorldMapView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		FAC91012302686E4C56AACF3 /* Pods_MRWorldMapView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3F445C6C9742A102502A4 /* Pods_MRWorldMapView_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		00AC34E4DA7E1B1C149A55F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2049BBDD0B0BC9D8A16B352E /* MRWorldMapView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MRWorldMapView.podspec; path = ../MRWorldMapView.podspec; sourceTree = "<group>"; };
-		31B8ED803012F6BABBFB1239 /* Pods_MRWorldMapView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334ECBD19A03F83B7C95B3CC /* Pods-MRWorldMapView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRWorldMapView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MRWorldMapView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRWorldMapView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,11 +58,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		74C3F445C6C9742A102502A4 /* Pods_MRWorldMapView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8CFB8E20693278EF77BFC1A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8D21EE9ADC3D513039E72A23 /* Pods-MRWorldMapView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRWorldMapView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRWorldMapView_Tests/Pods-MRWorldMapView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		95F99F9CD62D97D043B9F314 /* Pods_MRWorldMapView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CDC906D62D23D3B36EA73B /* Pods-MRWorldMapView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRWorldMapView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRWorldMapView_Tests/Pods-MRWorldMapView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2DA5DF52840F4C9CED5D42F /* Pods_MRWorldMapView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRWorldMapView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6093918B15E9C6A211972C /* Pods-MRWorldMapView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRWorldMapView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				6FCA9F2BCB955BB40561D2D7 /* Pods_MRWorldMapView_Example.framework in Frameworks */,
+				734358616E764182D51F33A8 /* Pods_MRWorldMapView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				FAC91012302686E4C56AACF3 /* Pods_MRWorldMapView_Tests.framework in Frameworks */,
+				38F4348E701B4084F7681033 /* Pods_MRWorldMapView_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				31B8ED803012F6BABBFB1239 /* Pods_MRWorldMapView_Example.framework */,
-				74C3F445C6C9742A102502A4 /* Pods_MRWorldMapView_Tests.framework */,
+				C2DA5DF52840F4C9CED5D42F /* Pods_MRWorldMapView_Example.framework */,
+				95F99F9CD62D97D043B9F314 /* Pods_MRWorldMapView_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A71490D0F43862AE6819840D /* Embed Pods Frameworks */,
 				A7ED14403E6F3F58BCFF4773 /* Copy Pods Resources */,
+				4998AFD4AC50431B7AB78D37 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,8 +224,8 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				ECACB94C4B4676CA26776205 /* Embed Pods Frameworks */,
 				17AEC1E55D1940CDDD56ADD0 /* Copy Pods Resources */,
+				CE8F04EC2A780E849A8B030E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,6 +323,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		4998AFD4AC50431B7AB78D37 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		985EC005BA819F77726965CF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,21 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A71490D0F43862AE6819840D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7ED14403E6F3F58BCFF4773 /* Copy Pods Resources */ = {
@@ -368,7 +368,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRWorldMapView_Example/Pods-MRWorldMapView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ECACB94C4B4676CA26776205 /* Embed Pods Frameworks */ = {
+		CE8F04EC2A780E849A8B030E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "MRWorldMapView"
-  s.version          = "1.0.0"
-  s.summary          = "View that displays a map with selectable countries."
+  s.version          = "1.0.1"
+  s.summary          = "View that displays GeoJSON map with selectable countries."
   s.description      = <<-DESC
                        `MRWorldMapView` is a `UIView` subclass that displays a world map with selectable countries.
 

@@ -14,7 +14,7 @@ Limited support for loading custom [GeoJSON](http://geojson.org) maps is provide
 
 The code for drawing the map is derived from the [Yuba - Cocoa framework for drawing graphs, charts and maps](https://github.com/sergeylenkov/Yuba).
 
-![World Map](https://raw.githubusercontent.com/hectr/MRWorldMapView/master/screenshot.jpg "World Map")
+![EU Map](https://raw.githubusercontent.com/hectr/MRWorldMapView/master/screenshot.jpg "EU Map")
 ![World Map](https://raw.githubusercontent.com/hectr/MRWorldMapView/master/custom.jpg "World Map")
 
 ## Usage
